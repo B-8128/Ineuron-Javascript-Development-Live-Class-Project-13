@@ -1,324 +1,387 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 * {
-    padding: 0;
     margin: 0;
-    font-family: 'Poppins';
+    padding: 0;
 }
 
 header {
     background-color: #7030cc;
-    width: 99%;
     height: 100vh;
-    margin-left: 7px;
     -moz-border-radius: 0px;
     -webkit-border-radius: 3px 3px 0px 0px;
     border-radius: 15px 15px 0px 0px;
     margin-top: 7px;
 }
 
-
-/* Navbar  */
-
-.navbar {
-    margin-left: 37%;
-    font-size: 0.9rem;
-    padding-top: 48px;
+:root {
+    --header-bg-color: #7030cc;
+    --text-white-color: #fff;
+    --btn-bg-color: #1bbcef;
 }
 
-.nav-item {
-    margin-left: 40px;
-    margin-top: 25px;
-    color: #fff;
+body {
+    font-family: "Poppins", sans-serif;
 }
 
-.navbar .nav-item:nth-child(1) {
-    color: #1bbcef;
-}
-
-.home {
-    display: inline-block;
-    position: relative;
-}
-
-.home:before {
-    content: "";
-    position: absolute;
+.wrapper {
     width: 100%;
-    height: 0px;
-    bottom: 0;
+}
+
+.containerFluid {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.container {
+    width: 80%;
+    margin: 10px auto;
+}
+
+header .container {
+    height: 100%;
+}
+
+header {
+    background-color: var(--header-bg-color);
+    min-height: 80vh;
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
+nav {
+    padding: 24px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brandLogo img {
+    height: 40px;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+}
+
+nav ul li {
+    font-size: 18ppx;
+    margin: 0 24px;
+    color: var(--text-white-color);
+}
+
+nav ul li.menu {
+    display: none;
+}
+
+nav ul button {
+    background-color: var(--btn-bg-color);
+    color: var(--text-white-color);
+    padding: 8px 24px;
+    margin-left: 32px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    text-transform: uppercase;
+}
+
+li.active {
+    color: var(--btn-bg-color);
     border-bottom: 2px solid #ce6bde;
 }
 
-.nav-item-active {
-    margin-left: 50px;
-    margin-top: 25px;
-    background-color: #1bbcef;
-    color: #fff;
-    padding: 8px 15px;
-    font-size: 11px;
-    font-weight: bold;
-    font-size: 0.8rem;
-}
-
-.navbar svg {
-    margin-left: 25px;
-}
-
-.logo img {
-    margin-left: 165px;
-    position: absolute;
-    top: 10%;
-}
-
-
-/* Section Zero  */
-
-.section {
+.imageWithTextSection {
     width: 100%;
-    float: left;
-    position: absolute;
-    top: 17%;
-    color: #fff;
-}
-
-.left-section {
-    width: 40%;
-    float: left;
-    margin-top: 100px;
-    margin-left: 165px;
-}
-
-.left-section h1 {
-    font-size: 3rem;
-    width: 70%;
-}
-
-.left-section p {
-    font-size: 0.6rem;
-    width: 70%;
-    margin-top: 40px;
-}
-
-.right-section {
-    width: 46%;
-    float: left;
-}
-
-
-/* Section -1   */
-
-.section-1 {
-    width: 100%;
-    float: left;
-}
-
-.left {
-    width: 45%;
-    float: left;
-    margin-top: 60px;
-    margin-left: 60px;
-}
-
-.right {
-    width: 35%;
-    float: left;
-    margin-top: 150px;
-    margin-left: 200px;
-}
-
-.para1 {
     display: flex;
-    margin-bottom: 30px;
+    align-items: center;
 }
 
-.para1 img {
-    margin-top: -45px;
-    margin-left: 25px;
+.imageWithTextSection .leftBox {
+    width: 50%;
+    padding: 100px 0;
 }
 
-.heading {
-    margin-bottom: 50px;
+.imageWithTextSection .rightBox {
+    position: absolute;
+    right: 7%;
+    width: 38%;
+    bottom: 13%;
 }
 
-.content p {
-    width: 70%;
-    margin-top: 15px;
-    font-size: 0.8rem;
-    margin-left: 15px;
+.imageWithTextSection .rightBox img {
+    width: 100%;
 }
 
-.content h1 {
-    margin-left: 15px;
+.imageWithTextSection .leftBox h2 {
+    font-size: 52px;
+    color: var(--text-white-color);
+    line-height: 1.3;
 }
 
-
-/* Last Section  */
-
-.top {
-    text-align: center;
-    margin-bottom: 50px;
-    font-size: 1.2rem;
-}
-
-.bottom {
+.imageWithTextSection .leftBox p {
     width: 75%;
-    float: left;
-    padding: 10px 168px;
+    padding: 20px 0;
+    color: var(--text-white-color);
+}
+
+.imageWithTextTwo {
+    padding-top: 20px;
+}
+
+.imageWithTextTwo .containerFluid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.imageWithTextTwo .leftBox {
+    width: 70%;
+}
+
+.imageWithTextTwo .leftBox img {
+    width: 80%;
+    display: block;
+}
+
+.imageWithTextTwo .rightBox {
+    width: 30%;
+}
+
+.imageWithTextTwo .rightBox>h2 {
+    font-size: 24px;
+    font-weight: 600;
+    padding-bottom: 20px;
+    padding-right: 50px;
+}
+
+.imageWithTextTwo .rightBox ul {
+    padding-left: 32px;
+    list-style-type: none;
+}
+
+.imageWithTextTwo .rightBox ul li h2 {
+    font-size: 18px;
+    margin-bottom: 16px;
+    position: relative;
+}
+
+.imageWithTextTwo .rightBox ul li h2.shareOne:before {
+    color: #f28a3f;
+}
+
+.imageWithTextTwo .rightBox ul li h2.shareTwo:before {
+    color: #82cd45;
+}
+
+.imageWithTextTwo .rightBox ul li h2.shareThree:before {
+    color: #409cf2;
+}
+
+.imageWithTextTwo .rightBox ul li h2:before {
+    position: absolute;
+    content: "\f064";
+    font-family: "Font Awesome 5 Free";
+    left: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.imageWithTextTwo .rightBox ul li p {
+    font-size: 16px;
+    padding-bottom: 10px;
+}
+
+.featureSection {
+    width: 100%;
+}
+
+.featureSection>h2 {
+    width: 30%;
+    padding: 0 50px;
+    margin: 0 auto;
+    font-size: 28px;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.mainBox {
+    width: 100%;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.mainBox .boxes {
+    width: 25%;
+}
+
+.mainBox .boxes .marginBoxes {
     text-align: center;
 }
 
-.box {
-    width: 20%;
-    float: left;
-    border: 2px solid black;
-    border: none;
-    border-radius: 20px;
-    margin-left: 90px;
-    box-shadow: 5px 5px 2px #bfbfbf;
+.mainBox .boxes .imageBox {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
 }
 
-.box svg {
-    width: 20%;
-    margin-top: 35px;
+.mainBox .boxes .imageBox img {
+    height: 50px;
+    display: block;
+    padding: 20px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
 }
 
-.box p {
-    width: 97%;
-    margin-bottom: 5px;
+.mainBox .boxes .imageBox.one img {
+    background-color: #faeaeb;
+}
+
+.mainBox .boxes .imageBox.two img {
+    background-color: #fbf0ee;
+}
+
+.mainBox .boxes .imageBox.three img {
+    background-color: #e9f4f6;
+}
+
+.mainBox .boxes .imageBox.four img {
+    background-color: #ddb5e880;
+}
+
+.mainBox .boxes .marginBoxes {
+    margin-right: 24px;
+    cursor: pointer;
+    border-radius: 30px;
+    padding: 20px 0 0 0;
+    box-shadow: 5px 5px 0 0 rgba(0, 0, 0, 0.5);
+}
+
+.mainBox .boxes .marginBoxes .contentBox {
+    transition: 0.3s;
+    border-radius: 30px;
 }
 
 .active {
-    background-color: #6429b7;
-    border-radius: 20px;
-    color: #fff;
-    font-size: 0.9rem;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    margin-top: 50px;
+    background-color: var(--header-bg-color);
+    color: var(--text-white-color);
+    margin-top: 7px;
 }
 
-.box1 {
-    width: 20%;
-    float: left;
-    border: 2px solid black;
-    margin-left: 20px;
-    box-shadow: 5px 5px 2px #bfbfbf;
-    border: none;
-    border-radius: 20px;
+.mainBox .boxes .marginBoxes .contentBox h2 {
+    font-size: 18px;
+    display: block;
+    text-align: center;
+    font-weight: 500;
+    padding-top: 10px;
 }
 
-.box1 svg {
-    width: 20%;
-    margin-top: 20px;
-    margin-left: 5px;
+.mainBox .boxes .marginBoxes .contentBox p {
+    font-size: 16px;
+    padding: 8px 0 0 0;
+    line-height: 1.3;
+    padding-bottom: 20px;
 }
 
-.box1 h1 {
-    margin-top: 40px;
+
+/* Responsive  */
+
+@media only screen and (max-width: 1260px) {
+    .imageWithTextSection .leftBox {
+        width: 70%;
+    }
+    .featureSection>h2 {
+        width: 50%;
+    }
+    .imageWithTextTwo .leftBox,
+    .imageWithTextTwo .rightBox {
+        width: 50%;
+    }
+    .imageWithTextTwo .containerFluid {
+        padding: 50px 0;
+    }
 }
 
-.box1 p {
-    font-size: 15px;
-    margin-top: 5px;
+@media only screen and (max-width: 1024px) {
+    header nav ul li {
+        display: none !important;
+    }
+    header nav ul li.menu {
+        display: block !important;
+        font-size: 24px;
+    }
+    nav ul button {
+        display: none;
+    }
+    .imageWithTextSection .leftBox {
+        width: 100%;
+        text-align: center;
+    }
+    .imageWithTextSection .leftBox p {
+        width: 100%;
+        padding: 20px;
+    }
+    .imageWithTextSection .rightBox {
+        display: none;
+    }
+    .mainBox .boxes {
+        width: 50%;
+        margin-bottom: 20px;
+    }
+    header {
+        min-height: auto;
+    }
 }
 
-.box2 {
-    width: 20%;
-    float: left;
-    border: 2px solid black;
-    margin-left: 20px;
-    box-shadow: 5px 5px 2px #bfbfbf;
-    border: none;
-    border-radius: 20px;
+@media only screen and (max-width: 768px) {
+    .imageWithTextTwo .leftBox,
+    .imageWithTextTwo .rightBox {
+        width: 100%;
+    }
+    .imageWithTextTwo .leftBox img {
+        margin: 0 auto;
+    }
+    .imageWithTextSection .leftBox h2 {
+        font-size: 44px;
+    }
+    .imageWithTextSection .leftBox {
+        padding: 50px 0;
+    }
+    .featureSection>h2 {
+        padding: 20px 0;
+        width: 80%;
+    }
+    .imageWithTextTwo .containerFluid {
+        padding-top: 0;
+    }
+    .imageWithTextTwo .rightBox>h2 {
+        text-align: center;
+    }
 }
 
-.box2 p {
-    font-size: 15px;
-    margin-top: 5px;
-    width: 85%;
-    margin-left: 15px;
-}
-
-.box2 h1 {
-    margin-top: 45px;
-}
-
-.box2 svg {
-    width: 20%;
-    margin-top: 35px;
-}
-
-.box3 {
-    width: 20%;
-    float: left;
-    border: 2px solid black;
-    margin-left: 20px;
-    box-shadow: 5px 5px 2px #bfbfbf;
-    border: none;
-    border-radius: 20px;
-}
-
-.box3 p {
-    font-size: 15px;
-    margin-top: 5px;
-    width: 85%;
-    margin-left: 15px;
-}
-
-.box3 svg {
-    width: 20%;
-    margin-top: 35px;
-    margin-left: -5px;
-}
-
-.box3 h1 {
-    margin-top: 45px;
-}
-
-.image1 {
-    border: 2px solid none;
-    border-radius: 100%;
-    position: absolute;
-    top: 227%;
-    width: 6.5%;
-    height: 12%;
-    left: 23.3%;
-    background-color: #faeaeb;
-    z-index: -1;
-}
-
-.image2 {
-    border: 2px solid none;
-    border-radius: 100%;
-    position: absolute;
-    top: 227%;
-    width: 6.5%;
-    height: 12%;
-    left: 40%;
-    background-color: #fbf0ee;
-    z-index: -1;
-}
-
-.image3 {
-    border: 2px solid none;
-    border-radius: 100%;
-    position: absolute;
-    top: 227%;
-    width: 6.5%;
-    height: 12%;
-    left: 56.2%;
-    background-color: #e9f4f6;
-    z-index: -1;
-}
-
-.image4 {
-    border: 2px solid none;
-    border-radius: 100%;
-    position: absolute;
-    top: 227%;
-    width: 6.5%;
-    height: 12%;
-    left: 72.5%;
-    background-color: #f2e7f5;
-    z-index: -1;
+@media only screen and (max-width: 525px) {
+    .mainBox .boxes {
+        width: 100%;
+    }
+    .mainBox .boxes .marginBoxes {
+        margin-right: 0;
+    }
+    .imageWithTextSection .leftBox h2 {
+        font-size: 32px !important;
+    }
+    .imageWithTextSection .leftBox p {
+        padding: 20px 0;
+    }
+    .featureSection>h2 {
+        font-size: 24px;
+    }
+    .imageWithTextTwo .rightBox>h2 {
+        padding-right: 0;
+        font-size: 22px;
+    }
 }
